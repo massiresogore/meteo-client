@@ -1,13 +1,9 @@
-import { Link } from "react-router-dom"
+import Weather from "./wheather/Weather";
 
 const HomePage = () => {
-  return (
-    <>
-       <p>Bienvenu dans météo de Reims</p>
-       <Link to="/users">Liste des users</Link>
-
+    return<>
+   <Weather />
     </>
-  )
 }
 
 export default HomePage
