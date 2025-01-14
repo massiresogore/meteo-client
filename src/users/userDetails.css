@@ -1,0 +1,76 @@
+/* Conteneur principal */
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Titre */
+  .heading {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Groupe de formulaire */
+  .formGroup {
+    margin-bottom: 15px;
+  }
+  
+  /* Étiquette */
+  .label {
+    display: block;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+  }
+  
+  /* Champ d'entrée */
+  .input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+  }
+  
+  .input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  
+  /* Boutons */
+  .button {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .updateButton {
+    background-color: #007bff;
+  }
+  
+  .updateButton:hover {
+    background-color: #0056b3;
+  }
+  
+  .deleteButton {
+    background-color: #ff4d4d;
+  }
+  
+  .deleteButton:hover {
+    background-color: #cc0000;
+  }
+  

@@ -20,10 +20,13 @@ const Navbar = () => {
       {auth.token?.token && <>
         <a href="/mes-adresses" className="navbar-link">Adesses Sauvegarder</a>
         <a href="/users" className="navbar-link">Users</a>
-        <a href="/register" className="navbar-link">Register</a>
         <button className="navbar-link-logout" onClick={()=> handleLogou()}>logout</button>
       </>}
-      {!auth.token?.token &&  <a href="/login" className="navbar-link">Login</a>}
+      {!auth.token?.token && <>
+        <a href="/register" className="navbar-link">S'inscrire</a>
+        <a href="/login" className="navbar-link">Login</a>
+      </> }
+   
        
       </div>
     </nav>
