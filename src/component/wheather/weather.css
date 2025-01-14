@@ -1,4 +1,10 @@
 
+#weather{
+  border: 10px solid red;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 .search-type {
     display: flex;
     justify-content: center;
@@ -27,7 +33,7 @@
     color: white;
   }
   
-.app {
+.app-weather {
     font-family: Arial, sans-serif;
     text-align: center;
     padding: 20px;
@@ -77,3 +83,32 @@
     text-align: left;
   }
   
+
+  .save-address-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .save-address-input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 80%;
+    max-width: 400px;
+  }
+  
+  .save-address-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .save-address-button:hover {
+    background-color: #0056b3;
+  }
