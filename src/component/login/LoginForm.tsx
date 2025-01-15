@@ -3,6 +3,7 @@ import { useAuth } from '../../auth/AuthContext';
 import axios from 'axios';
 import './login.css';
 import { useNavigate } from 'react-router-dom';
+import { customFetch } from '../../service/api-client';
 const LoginForm: React.FC = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -11,6 +12,8 @@ const LoginForm: React.FC = () => {
 
   const handleLogin = async () => {
    const response =  await axios.post('http://localhost:8000/auth', { email, password });
+   console.log(response.data);
+   
     login(response.data);
     navigate('/');
   };

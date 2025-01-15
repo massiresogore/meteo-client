@@ -34,7 +34,6 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   const logout = () => {
 
     setToken(null);
-  
   };
 
   const register = (newToken: string) => {
@@ -51,7 +50,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
 export const useAuth = () => {
   const context = useContext(AuthContext);
   if (!context) {
-    throw new Error('useAuth must be used within an AuthProvider');
+    throw new Error('doit être utilisé dans un AuthProvider');
   }
   return context;
 };

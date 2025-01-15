@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import "./weather.css";
 import { useAuth } from "../../auth/AuthContext";
 import { customFetch } from "../../service/api-client";
+import AdresseForm from "../Adresse/AdresseForm";
+import axios from "axios";
 
 const App: React.FC = () => {
   const [adresse, setAdresse] = useState("");
@@ -51,7 +53,7 @@ const App: React.FC = () => {
   useEffect(() => {
     const fetchInitialWeather = async () => {
       try {
-        const response = await customFetch.get(`/weather/Reims`, {});
+        const response = await axios.get(`http://localhost:8000/api/weather/Reims`,);
 
         setWeather(response.data);
       } catch (err) {
@@ -123,18 +125,8 @@ const App: React.FC = () => {
       )}
     </div>
   <div>
-    <form className="save-address-form">
-      <input
-        type="text"
-        placeholder="Entrez une adresse à enregistrer..."
-        value={adresse}
-        onChange={(e) => setAdresse(e.target.value)}
-        className="save-address-input"
-      />
-      <button type="submit" className="save-address-button">
-        Enregistrer
-      </button>
-    </form>
+    {auth.token?.token && <AdresseForm />}
+    
   </div>
  </div>
   );
