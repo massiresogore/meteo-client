@@ -68,7 +68,7 @@ const App: React.FC = () => {
   return (
  <div id="weather">
          <div className="app-weather">
-      <header className="header">
+         {auth.token?.token &&  <header className="header">
         <h1>Rechercher la météo Par</h1>
         <div className="search-type">
           <button
@@ -110,7 +110,9 @@ const App: React.FC = () => {
             </button>
           </div>
         )}
-      </header>
+      </header>}
+
+     
 
       {error && <p className="error-message">{error}</p>}
 
