@@ -1,20 +1,23 @@
+# Rapport
 
-# Router
+## Credentials (Admin)
+
+```bash
+email: massire@gmail.com
+passworg: massire
+````
+
+## Router
+
 installationde router
+
 ```bash
 npm i react-router-dom
 ```
 
+## On cherche id de la ville par nom de la ville
 
-
-
-
-
-
-
-
-
-# On cherche id de la ville par nom de la ville
+```bash
 https://api.openweathermap.org/data/2.5/weather?q=Reims&appid=598376d6b5b90d5d074809b11a251ed2
 on aura cette réppnse
 {
@@ -62,8 +65,11 @@ on aura cette réppnse
   "name": "Arrondissement de Reims",
   "cod": 200
 }
+```
 
-# on recherche la méteo de 5 prochain jour de cette ville
+## on recherche la méteo de 5 prochain jour de cette ville
+
+```bash
 https://api.openweathermap.org/data/2.5/forecast?id=2984113&appid=598376d6b5b90d5d074809b11a251ed2&units=metric&lang=fr
 
 {
@@ -121,13 +127,29 @@ https://api.openweathermap.org/data/2.5/forecast?id=2984113&appid=598376d6b5b90d
     "sunset": 1736871089
   }
 }]
+```
 
+## installation de ReactQuery pour gerer le cache des données provenants de l'api
 
+- la deuxième dépendence est recommandée pour la reconnaissance des importations des composants React-Query
+- devtools permet de gérer etobserver effication des données.
 
+```bash
+npm i @tanstack/react-query
+npm i -D @tanstack/eslint-plugin-query 
+npm i @tanstack/react-query-devtools
+```
 
+- Offre une meilleurs expérience de gestion des donndes réçues via les Api.
 
+## npm
 
+- NPM va afficher une liste des packages qui acceptent un soutien financier (comme un don via OpenCollective, Patreon, ou GitHub Sponsors).
+- le deuxième permet d'afficher ces informations sous forme de JSON
+- La commande npm audit fix est utilisée pour corriger automatiquement les vulnérabilités de sécurité dans les dépendances d'un projet Node.js.
 
-
-
-
+```bash
+npm fund
+npm fund --json
+npm audit fix
+```

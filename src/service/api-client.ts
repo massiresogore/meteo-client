@@ -8,7 +8,6 @@ export const customFetch = axios.create({
   baseURL: baseUerl,
   headers: {
     'Content-Type': 'application/ld+json',
-    'Accept': 'application/ld+json',
-    
+    'Accept': 'application/ld+json'
   }
 });
